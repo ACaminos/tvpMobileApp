@@ -34,6 +34,6 @@ npx expo start
 
 [Enviroment Setup React Native](https://reactnative.dev/docs/environment-setup)
 
-[Expo Docs](https://docs.expo.dev/get-started/installation/)
+[Expo Documentation](https://docs.expo.dev/get-started/installation/)
 
 [Download Android Studio](https://developer.android.com/studio)
