@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { HomeScreen } from '../screens/HomeScreen';
 import SettingScreen from '../screens/SettingScreen';
 import { OtherScreen } from '../screens/OtherScreen';
+import SocialNetworksScreen from '../screens/SocialNetworksScreen';
 
 const Stack = createStackNavigator();
 
@@ -47,6 +48,15 @@ export const StackNavigator = () => {
       <Stack.Screen
         name="OtherScreen"
         component={ OtherScreen }
+        options={{
+            headerTitle:(props) => (<Image style={{width:50, height:50}} source={require('../assets/android-chrome-256x256.png')} />),
+            headerRight: () => ( <Button title='VIVO' color="red" /> ),
+            headerTitleAlign:'center'
+        }}
+        />
+      <Stack.Screen
+        name="SocialNetworksScreen"
+        component={ SocialNetworksScreen }
         options={{
             headerTitle:(props) => (<Image style={{width:50, height:50}} source={require('../assets/android-chrome-256x256.png')} />),
             headerRight: () => ( <Button title='VIVO' color="red" /> ),
