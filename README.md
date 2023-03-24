@@ -19,7 +19,7 @@ Yarn :
 Then go to
 
 ```bash
-  cd .\tvpMobile\
+  cd .\tvpMobileApp\
 ```
     
 And then, to run the project, run :
