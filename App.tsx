@@ -14,7 +14,6 @@ const Stack = createNativeStackNavigator();
 function App() {
   return (
     <NavigationContainer>
-      {/* <StackNavigator/> */}
       <MenuLateral/>
     </NavigationContainer>
   )

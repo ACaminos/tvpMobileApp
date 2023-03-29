@@ -1,11 +1,14 @@
 import React from 'react'
-import { View, Text, Button } from 'react-native'
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+import { Text } from 'react-native'
+
+//Resources
 import Icon from 'react-native-vector-icons/Ionicons';
+import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
+
+//Screens
 import { HomeScreen } from '../screens/HomeScreen';
-import { Secciones } from '../screens/Secciones';
 import SettingScreen from '../screens/SettingScreen';
+import { Secciones } from '../screens/Secciones';
 
 const Tab = createMaterialBottomTabNavigator();
 

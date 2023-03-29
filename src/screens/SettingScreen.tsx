@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react'
-import {View, Text, Button, Switch, StyleSheet} from 'react-native'
+import React, { useState } from 'react'
+import {View, Text, Switch, StyleSheet} from 'react-native'
+
+//Resources
 import {useNavigation} from '@react-navigation/core'
 
 // El useNavigation es otra alternativa para hacer navegacion con respecto a HomeScreen

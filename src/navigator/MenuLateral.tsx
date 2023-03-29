@@ -54,7 +54,7 @@ export const MenuLateral = () => {
                 headerTitle: () => ( logoTvp() ),
                 headerTitleAlign:'center',
                 title:'Configuraciones',
-                headerRight: () => ( botonVivo() )
+                headerRight: () => ( botonVivo() ),
             }}
             />
         <Drawer.Screen

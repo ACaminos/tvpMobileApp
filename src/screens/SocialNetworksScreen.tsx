@@ -1,8 +1,12 @@
-import { View, Text, TouchableOpacity, Linking } from 'react-native'
 import React from 'react'
-import { styles } from '../theme/appTheme'
+import { View, Text, TouchableOpacity, Linking } from 'react-native'
+
+//Resources
 import Icon from 'react-native-vector-icons/Ionicons';
 import { Divider } from 'react-native-paper';
+
+//Styles
+import { styles } from '../theme/appTheme'
 
 export default function SocialNetworksScreen() {
   return (

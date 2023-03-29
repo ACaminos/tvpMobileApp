@@ -4,7 +4,7 @@ You need node version 18.13.0 or higher...
 
 Install TVP App with npm or yarn
 
-In the root of the project run : 
+In the root of the project run :
 
 Npm :
 ```bash
@@ -21,7 +21,7 @@ Then go to
 ```bash
   cd .\tvpMobileApp\
 ```
-    
+
 And then, to run the project, run :
 
 ```bash

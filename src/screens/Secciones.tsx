@@ -1,10 +1,9 @@
-// import React from 'react'
+//Resources
 import { FlatList } from 'react-native'
 import { Card, Text } from 'react-native-paper';
 
-//Resources
+//Data Resources
 import Data from '../Data/DataStreams';
-
 
 // const LeftContent = props => <Avatar.Icon {...props} icon="folder" /> Version resumida de la card
 

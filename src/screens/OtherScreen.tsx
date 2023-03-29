@@ -1,6 +1,10 @@
 import React from 'react'
-import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { View, Text, Button } from 'react-native'
+
+//Resources
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+
+//Styles
 import { styles } from '../theme/appTheme';
 
 interface Props extends NativeStackScreenProps<any,any>{};

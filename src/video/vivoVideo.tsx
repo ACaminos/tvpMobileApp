@@ -1,6 +1,8 @@
 import * as React from 'react';
-import { View, StyleSheet, Button, Dimensions, useWindowDimensions } from 'react-native';
-import { Video, AVPlaybackStatus } from 'expo-av';
+import { View, StyleSheet, useWindowDimensions } from 'react-native';
+
+//Resources
+import { Video } from 'expo-av';
 
 //resourse m3u8
 //https://gist.github.com/Fazzani/8f89546e188f8086a46073dc5d4e2928
