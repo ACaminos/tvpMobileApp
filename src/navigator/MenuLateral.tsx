@@ -63,7 +63,7 @@ export const MenuLateral = () => {
             options={{
                 headerTitle: () => ( logoTvp() ),
                 headerTitleAlign:'center',
-                title:'Configuraciones',
+                title:'Vivo',
                 headerRight: () => ( botonVivo() )
             }}
         />
@@ -73,7 +73,7 @@ export const MenuLateral = () => {
             options={{
                 headerTitle: () => ( logoTvp() ),
                 headerTitleAlign:'center',
-                title:'Configuraciones',
+                title:'Redes Sociales',
                 headerRight: () => ( botonVivo() )
             }}
         />
@@ -106,7 +106,7 @@ const MenuInterno = ( {navigation } : DrawerContentComponentProps ) => {
 
                 <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('Secciones') }>
                     <Icon name="apps-outline" size={ 25 } color="#2497ff" />
-                    <Text style={ styles.menuTexto }>Secciones</Text>
+                    <Text style={ styles.menuTexto }>Programas</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('VivoVideo') }>
