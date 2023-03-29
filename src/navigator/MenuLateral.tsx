@@ -16,6 +16,7 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { styles } from '../theme/appTheme';
 import VivoVideo from '../video/VivoVideo';
 import SocialNetworksScreen from '../screens/SocialNetworksScreen';
+import NewsScreen from '../screens/NewsScreen';
 
 const Drawer = createDrawerNavigator();
 
@@ -70,6 +71,16 @@ export const MenuLateral = () => {
         <Drawer.Screen
             name='SocialNetworksScreen'
             component={ SocialNetworksScreen }
+            options={{
+                headerTitle: () => ( logoTvp() ),
+                headerTitleAlign:'center',
+                title:'Redes Sociales',
+                headerRight: () => ( botonVivo() )
+            }}
+        />
+        <Drawer.Screen
+            name='newsScreen'
+            component={ NewsScreen }
             options={{
                 headerTitle: () => ( logoTvp() ),
                 headerTitleAlign:'center',

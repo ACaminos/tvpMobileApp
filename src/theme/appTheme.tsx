@@ -47,5 +47,32 @@ export const styles = StyleSheet.create({
       position:'absolute',
       width:'100%',
       height: 500
+  },
+  //Start Styles news
+  titleNews : {
+    color: 'black',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'left'
+  },
+  textBodyNews : {
+    color : 'black',
+    fontSize : 20,
+    textAlign : 'justify',
+    lineHeight: 35,
+  },
+  volantaNews : {
+    color : 'black',
+    fontSize: 15,
+    fontWeight : 'bold',
+    textAlign: 'left'
+  },
+  extractoNews : {
+    color : 'black',
+    fontSize : 15 ,
+    textAlign : 'left',
+    marginBottom: 10
   }
+  //End Styles news
+
 })
