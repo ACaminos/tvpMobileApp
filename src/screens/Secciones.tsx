@@ -13,10 +13,10 @@ export const Secciones = () => {
       <FlatList
         data={Data}
         renderItem={ ( { item } ) =>
-        <Card mode='contained' style={ { padding:5, borderRadius:0 } }>
+        <Card mode={item.mode} style={ { padding:5, borderRadius:0 } }>
         {/* <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} /> insercino forma resumida de la card */}
         <Card.Content>
-          <Text variant="titleLarge" style={{color:'black'}}>{item.title}</Text>
+          <Text variant="titleLarge" style={{color:'black', fontSize:25, fontWeight:'bold'}}>{item.title} <Text style={{fontSize:20}}>- {item.horario}</Text></Text>
           <Text variant="bodyMedium" style={{marginVertical:10}}>{item.text}</Text>
         </Card.Content>
         <Card.Cover style={{marginVertical:10}} source={{ uri: `${item.photo}`} } />
