@@ -1,17 +1,18 @@
 import { StyleSheet } from "react-native";
+import { transparent } from "react-native-paper/lib/typescript/src/styles/themes/v2/colors";
 
 export const styles = StyleSheet.create({
     globalMargin: {
-        marginHorizontal:20
+      marginHorizontal:20
     },
     menuContainer:{
-        marginVertical: 30,
-        marginHorizontal:25,
+      marginVertical: 30,
+      marginHorizontal:25,
     },
     title:{
-        fontSize: 30,
-        color: 'black',
-        marginBottom: 20
+      fontSize: 30,
+      color: 'black',
+      marginBottom: 20
     },
     menuTexto:{
         fontSize:20,
@@ -19,28 +20,28 @@ export const styles = StyleSheet.create({
         marginLeft:10
     },
     menuBoton:{
-        marginVertical:10,
+      marginVertical:10,
     },
     avatarContainer:{
-        alignItems:'center',
-        marginTop: 20,
+      alignItems:'center',
+      marginTop: 20,
     },
     avatar:{
-        width:150,
-        height:150
+      width:150,
+      height:150
     },
     //Start styles button header vivo
     appButtonContainer: {
-        elevation: 8,
-        backgroundColor:'#DC343C',
-        borderRadius: 10,
-        paddingVertical: 10,
-        paddingHorizontal: 12,
-        marginRight:15
+      elevation: 8,
+      backgroundColor:'#DC343C',
+      borderRadius: 10,
+      paddingVertical: 10,
+      paddingHorizontal: 17,
+      marginRight:15,
       },
-      appButtonText: {
-        color: "#fff",
-        fontWeight: "bold"
+    appButtonText: {
+      color: "#fff",
+      fontWeight: "bold",
       },
       //End styles button header vivo
     backgroundVideo: {
@@ -48,31 +49,32 @@ export const styles = StyleSheet.create({
       width:'100%',
       height: 500
   },
-  //Start Styles news
-  titleNews : {
-    color: 'black',
-    fontSize: 30,
-    fontWeight: 'bold',
-    textAlign: 'left'
+    //Start Styles news
+    titleNews : {
+      color: 'black',
+      fontSize: 30,
+      fontWeight: 'bold',
+      textAlign: 'left',
+      marginBottom : 10,
   },
-  textBodyNews : {
-    color : 'black',
-    fontSize : 20,
-    textAlign : 'justify',
-    lineHeight: 35,
+    textBodyNews : {
+      color : 'black',
+      fontSize : 23,
+      textAlign : 'justify',
+      lineHeight: 35,
   },
-  volantaNews : {
-    color : 'black',
-    fontSize: 15,
-    fontWeight : 'bold',
-    textAlign: 'left'
+    volantaNews : {
+      color : 'black',
+      fontSize: 15,
+      fontWeight : 'bold',
+      textAlign: 'left'
   },
-  extractoNews : {
-    color : 'black',
-    fontSize : 15 ,
-    textAlign : 'left',
-    marginBottom: 10
+    extractoNews : {
+      color : 'black',
+      fontSize : 17 ,
+      textAlign : 'justify',
+      marginBottom: 10
   }
-  //End Styles news
+    //End Styles news
 
 })

@@ -17,7 +17,7 @@ const VivoVideo = () => {
     <View style={styles.container}>
       <Video
         ref={video}
-        style={{...styles.video, width:ancho, height:alto, }}
+        style={{...styles.video, width:ancho, height:'50%', }} //height:alto
         source={{
           uri: 'https://assets.afcdn.com/video49/20210722/v_645516.m3u8',
         }}
