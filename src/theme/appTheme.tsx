@@ -1,5 +1,4 @@
 import { StyleSheet } from "react-native";
-import { transparent } from "react-native-paper/lib/typescript/src/styles/themes/v2/colors";
 
 export const styles = StyleSheet.create({
     globalMargin: {
@@ -43,7 +42,7 @@ export const styles = StyleSheet.create({
       color: "#fff",
       fontWeight: "bold",
       },
-      //End styles button header vivo
+    //End styles button header vivo
     backgroundVideo: {
       position:'absolute',
       width:'100%',
@@ -59,21 +58,23 @@ export const styles = StyleSheet.create({
   },
     textBodyNews : {
       color : 'black',
-      fontSize : 23,
-      textAlign : 'justify',
-      lineHeight: 35,
+      fontSize : 15,
+      textAlign : 'left',
+      lineHeight: 25,
   },
     volantaNews : {
       color : 'black',
       fontSize: 15,
       fontWeight : 'bold',
-      textAlign: 'left'
+      textAlign: 'left',
   },
     extractoNews : {
       color : 'black',
-      fontSize : 17 ,
+      fontSize : 13 ,
       textAlign : 'justify',
-      marginBottom: 10
+      marginBottom: 15,
+      lineHeight: 20,
+
   }
     //End Styles news
 

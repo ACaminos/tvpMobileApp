@@ -6,10 +6,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 //Screens
 import { HomeScreen } from '../screens/HomeScreen';
-import { OtherScreen } from '../screens/OtherScreen';
+import { Streams } from '../screens/Streams';
 import SettingScreen from '../screens/SettingScreen';
 import SocialNetworksScreen from '../screens/SocialNetworksScreen';
 import NewsScreen from '../screens/NewsScreen';
+import Seccion from '../screens/Seccion';
 
 const Stack = createStackNavigator();
 
@@ -27,6 +28,7 @@ export const StackNavigator = () => {
             cardStyle:{ backgroundColor:'white' }
         }}
         >
+
       <Stack.Screen
         name="HomeScreen"
         component={ HomeScreen }
@@ -37,6 +39,7 @@ export const StackNavigator = () => {
             title:'Inicio',
             cardStyle:{ borderBottomColor:'#000' }
         }} />
+
       <Stack.Screen
         name="SettingScreen"
         component={ SettingScreen }
@@ -47,15 +50,7 @@ export const StackNavigator = () => {
             title:'Configuraciones',
         }}
         />
-      <Stack.Screen
-        name="OtherScreen"
-        component={ OtherScreen }
-        options={{
-            headerTitle:( props ) => ( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png') } /> ),
-            headerRight: () => ( <Button title='VIVO' color="red" /> ),
-            headerTitleAlign:'center'
-        }}
-        />
+
       <Stack.Screen
         name="SocialNetworksScreen"
         component={ SocialNetworksScreen }
@@ -65,9 +60,30 @@ export const StackNavigator = () => {
             headerTitleAlign:'center'
         }}
         />
+
       <Stack.Screen
         name="newsScreen"
         component={ NewsScreen }
+        options={{
+            headerTitle:( props ) => ( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png') } />),
+            headerRight: () => ( <Button title='VIVO' color="red" /> ),
+            headerTitleAlign:'center'
+        }}
+        />
+
+      <Stack.Screen
+        name="Streams"
+        component={ Streams }
+        options={{
+            headerTitle:( props ) => ( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png') } />),
+            headerRight: () => ( <Button title='VIVO' color="red" /> ),
+            headerTitleAlign:'center'
+        }}
+        />
+
+      <Stack.Screen
+        name="Seccion"
+        component={ Seccion }
         options={{
             headerTitle:( props ) => ( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png') } />),
             headerRight: () => ( <Button title='VIVO' color="red" /> ),

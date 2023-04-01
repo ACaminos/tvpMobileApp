@@ -1,27 +1,25 @@
+import { FlatList } from 'react-native'
+
 //Resources
-import { FlatList, Image } from 'react-native'
-import { Card, Text } from 'react-native-paper';
+import Icon from 'react-native-vector-icons/Ionicons';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import { List } from 'react-native-paper';
 
 //Data Resources
-import Data from '../Data/DataStreams';
+import { DataSecciones } from '../Data/DataSecciones';
 
-// const LeftContent = props => <Avatar.Icon {...props} icon="folder" /> Version resumida de la card
-
-export const Secciones = () => {
+export const Secciones = ( { navigation } ) => {
   return (
       <FlatList
-        data={Data}
+        data={DataSecciones}
         renderItem={ ( { item } ) =>
-        <Card mode='contained' style={ { padding:5, borderRadius:0 } }>
-        {/* <Card.Title title="Card Title" subtitle="Card Subtitle" left={LeftContent} /> insercino forma resumida de la card */}
-        <Card.Content>
-          <Text variant="titleLarge" style={{color:'black', fontSize:25, fontWeight:'bold'}}>{item.title} <Text style={{fontSize:20}}>- {item.horario}</Text></Text>
-          <Text variant="bodyMedium" style={{marginVertical:10}}>{item.text}</Text>
-          <Image source={{ uri: `${item.photo}`}} borderRadius={0} style={{width:'100%',height:200}} />
-        </Card.Content>
-        {/* <Card.Cover style={{marginVertical:10}} source={{ uri: `${item.photo}`} } /> */}
-      </Card>
-       }
+        <TouchableOpacity onPress={ () => navigation.navigate('Seccion', { titulo : item.Titulo})}>
+          <List.Section style={{display:'flex', justifyContent:'center', alignContent:'center', marginLeft:15}}>
+            {/* <List.Subheader></List.Subheader> */}
+            <List.Item title={item.Titulo} left={() => <Icon name="chevron-forward-outline" size={ 25 } color="#2497ff" />} />
+          </List.Section>
+        </TouchableOpacity>
+      }
       />
   )
 }

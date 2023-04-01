@@ -6,8 +6,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 
 //Screens
-import { HomeScreen } from '../screens/HomeScreen';
 import SettingScreen from '../screens/SettingScreen';
+import { HomeScreen } from '../screens/HomeScreen';
 import { Secciones } from '../screens/Secciones';
 
 const Tab = createMaterialBottomTabNavigator();
@@ -27,16 +27,18 @@ export const Tabs = () => {
               <Icon name="home-outline" size={ 25 } color="#2497ff" />
             </Text>
           }}/>
+
       <Tab.Screen
         name='Secciones'
         component={ Secciones }
         options={{
-          title:'Programas',
+          title:'Secciones',
           tabBarIcon:( props ) =>
             <Text style={ { color:'white' } }>
                 <Icon name="apps-outline" size={ 25 } color="#2497ff" />
             </Text>
           }}/>
+
       <Tab.Screen
         name='SettingScreen'
         component={ SettingScreen }

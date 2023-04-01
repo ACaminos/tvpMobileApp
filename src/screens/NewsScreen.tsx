@@ -1,9 +1,10 @@
-import { View, Text, SafeAreaView, Image, ScrollView } from 'react-native'
 import React from 'react'
+import { Text, Image, ScrollView } from 'react-native'
+
+//Styles
 import { styles } from '../theme/appTheme';
 
-
-export default function NewsScreen( { route, navigation } ) {
+export default function NewsScreen( { route } ) {
   const { volanta, titulo, extracto, foto, Texto } = route.params;
   // console.log ('aca va el texto',Texto)
   return (

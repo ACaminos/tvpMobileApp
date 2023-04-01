@@ -1,29 +1,28 @@
-import react, { useState } from 'react'
-import { Button, Image, TouchableOpacity, View, Text } from 'react-native'
+import { Image, TouchableOpacity, View, Text } from 'react-native'
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView } from '@react-navigation/drawer';
 
 //Screens
-import { HomeScreen } from '../screens/HomeScreen';
-import { Secciones } from '../screens/Secciones';
+import { Streams } from '../screens/Streams';
 import SettingScreen from '../screens/SettingScreen';
-import { OtherScreen } from '../screens/OtherScreen';
+import NewsScreen from '../screens/NewsScreen';
+import SocialNetworksScreen from '../screens/SocialNetworksScreen';
 
 //Navigator
 import { Tabs } from './Tabs';
 
 //Resources
 import Icon from 'react-native-vector-icons/Ionicons';
-import { styles } from '../theme/appTheme';
 import VivoVideo from '../video/VivoVideo';
-import SocialNetworksScreen from '../screens/SocialNetworksScreen';
-import NewsScreen from '../screens/NewsScreen';
+import Seccion from '../screens/Seccion';
+
+//Styles
+import { styles } from '../theme/appTheme';
+
 
 const Drawer = createDrawerNavigator();
 
 export const logoTvp =() => {
-    return(
-        <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png')}/>
-    )
+    return( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png')}/>    )
 }
 
 export const botonVivo = () => {
@@ -84,7 +83,27 @@ export const MenuLateral = () => {
             options={{
                 headerTitle: () => ( logoTvp() ),
                 headerTitleAlign:'center',
-                title:'Redes Sociales',
+                title:'Noticias',
+                headerRight: () => ( botonVivo() )
+            }}
+        />
+        <Drawer.Screen
+            name='Streams'
+            component={ Streams }
+            options={{
+                headerTitle: () => ( logoTvp() ),
+                headerTitleAlign:'center',
+                title:'Streams',
+                headerRight: () => ( botonVivo() )
+            }}
+        />
+        <Drawer.Screen
+            name='Seccion'
+            component={ Seccion }
+            options={{
+                headerTitle: () => ( logoTvp() ),
+                headerTitleAlign:'center',
+                title:'Seccion',
                 headerRight: () => ( botonVivo() )
             }}
         />
@@ -92,7 +111,7 @@ export const MenuLateral = () => {
   );
 }
 
-const MenuInterno = ( {navigation } : DrawerContentComponentProps ) => {
+const MenuInterno = ( { navigation } : DrawerContentComponentProps ) => {
 
     return(
         <DrawerContentScrollView>
@@ -111,17 +130,17 @@ const MenuInterno = ( {navigation } : DrawerContentComponentProps ) => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('Secciones') }>
-                    <Icon name="newspaper-outline" size={ 25 } color="#2497ff" />
-                    <Text style={ styles.menuTexto }>Ultimas Noticias</Text>
+                    <Icon name="tv-outline" size={ 25 } color="#2497ff" />
+                    <Text style={ styles.menuTexto }>Programas TV</Text>
                 </TouchableOpacity>
 
-                <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('Secciones') }>
-                    <Icon name="apps-outline" size={ 25 } color="#2497ff" />
-                    <Text style={ styles.menuTexto }>Programas</Text>
+                <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('Streams') }>
+                    <Icon name="desktop-outline" size={ 25 } color="#2497ff" />
+                    <Text style={ styles.menuTexto }>Programas Streams</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity style={ { ...styles.menuBoton, flexDirection:'row' } } onPress={ ()=> navigation.navigate('VivoVideo') }>
-                    <Icon name="tv-outline" size={ 25 } color="#2497ff" />
+                    <Icon name="play-circle-outline" size={ 25 } color="#2497ff" />
                     <Text style={ styles.menuTexto }>Transmisión en vivo</Text>
                 </TouchableOpacity>
 
