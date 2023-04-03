@@ -23,7 +23,7 @@ export const HomeScreen = ( { navigation } : Props ) => {
       // setData(json.posts)
       // console.log('aca estoy',json.acf.layout)
       const news = json.acf.layout
-      console.log('ACAAAAAAAA :', news)
+      // console.log('ACAAAAAAAA :', news)
       const { titulo, componente} = news
     }catch(e){
       console.error(e)

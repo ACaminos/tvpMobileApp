@@ -1,5 +1,5 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { Text, Image } from 'react-native'
 
 //Resources
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -12,12 +12,16 @@ import { Secciones } from '../screens/Secciones';
 
 const Tab = createMaterialBottomTabNavigator();
 
+export const logoTvp =() => {
+  return( <Image style={ { width:50, height:50 } } source={ require('../assets/android-chrome-256x256.png')}/>    )
+}
+
 
 export const Tabs = () => {
   return (
     <Tab.Navigator barStyle={ { backgroundColor:'#091e40' } } inactiveColor={'white'} shifting={true} activeColor={'white'}>
       <Tab.Screen
-        name='Home'
+        name='inicio'
         component={ HomeScreen }
         options={{
           title:'Inicio',
@@ -40,15 +44,26 @@ export const Tabs = () => {
           }}/>
 
       <Tab.Screen
+        name='opciones'
+        component={ SettingScreen }
+        options={{
+          title:'Otros',
+          tabBarIcon:( props ) =>
+            <Text style={ { color:'white' } }>
+              <Icon name="reorder-four-outline" size={ 25 } color="#2497ff" />
+            </Text>
+      }}/>
+
+      <Tab.Screen
         name='SettingScreen'
         component={ SettingScreen }
         options={{
           title:'Configuraciones',
           tabBarIcon:( props ) =>
             <Text style={ { color:'white' } }>
-              <Icon name="options-outline" size={ 25 } color="#2497ff" />
+              <Icon name="settings-outline" size={ 25 } color="#2497ff" />
             </Text>
-          }}/>
+      }}/>
     </Tab.Navigator>
   )
 }

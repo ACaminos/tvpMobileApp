@@ -36,7 +36,7 @@ export const botonVivo = () => {
 
 export const MenuLateral = () => {
   return (
-    <Drawer.Navigator drawerContent={ ( props ) => <MenuInterno {...props} /> }>
+    <Drawer.Navigator>
         <Drawer.Screen
             name='Tabs'
             component={ Tabs }
