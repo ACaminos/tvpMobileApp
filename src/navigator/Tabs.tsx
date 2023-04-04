@@ -9,6 +9,8 @@ import { createMaterialBottomTabNavigator } from '@react-navigation/material-bot
 import SettingScreen from '../screens/SettingScreen';
 import { HomeScreen } from '../screens/HomeScreen';
 import { Secciones } from '../screens/Secciones';
+import SocialNetworksScreen from '../screens/SocialNetworksScreen';
+import VivoVideo from '../video/VivoVideo';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -45,9 +47,9 @@ export const Tabs = () => {
 
       <Tab.Screen
         name='opciones'
-        component={ SettingScreen }
+        component={ SocialNetworksScreen }
         options={{
-          title:'Otros',
+          title:'Extras',
           tabBarIcon:( props ) =>
             <Text style={ { color:'white' } }>
               <Icon name="reorder-four-outline" size={ 25 } color="#2497ff" />
@@ -56,7 +58,7 @@ export const Tabs = () => {
 
       <Tab.Screen
         name='SettingScreen'
-        component={ SettingScreen }
+        component={ VivoVideo }
         options={{
           title:'Configuraciones',
           tabBarIcon:( props ) =>

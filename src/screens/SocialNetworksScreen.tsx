@@ -11,7 +11,7 @@ import { styles } from '../theme/appTheme'
 export default function SocialNetworksScreen() {
   return (
     <View style={styles.menuContainer}>
-        <Text style={{color:'black', textAlign:'left', fontSize:20, fontWeight:'bold', marginBottom:20}}>Seguinos en :</Text>
+        <Text style={{color:'black', textAlign:'left', fontSize:20, fontWeight:'bold', marginBottom:20}}>Nuestas redes</Text>
         <TouchableOpacity style={{...styles.menuBoton, flexDirection:'row'}} onPress={ ()=> { Linking.openURL( 'https://www.facebook.com/TVPublica/' ) } }>
             <Icon name="logo-facebook" size={ 25 } color="#000" />
             <Text style={styles.menuTexto}>Facebook</Text>

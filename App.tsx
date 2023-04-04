@@ -13,15 +13,21 @@ import { Tabs } from './src/navigator/Tabs';
 
 //Styles
 import { styles } from './src/theme/appTheme';
+import Seccion from './src/screens/Seccion';
+import SettingScreen from './src/screens/SettingScreen';
+import SocialNetworksScreen from './src/screens/SocialNetworksScreen';
+import { Streams } from './src/screens/Streams';
+import NewsScreen from './src/screens/NewsScreen';
+import VivoVideo from './src/video/VivoVideo';
 
 
 const Stack = createNativeStackNavigator();
 
 export const LogoTvp =() => {
-  return( <Image style={ { width:50, height:50 } } source={ require('./src/assets/android-chrome-256x256.png')}/>    )
+  return( <Image style={ { width:50, height:50 } } source={ require('./src/assets/android-chrome-256x256.png')}/>)
 }
 
-export const BotonVivo = () => {
+export const BotonVivo = ( { navigation } ) => {
   return (
       <TouchableOpacity  style={styles.appButtonContainer}>
           <Text style={styles.appButtonText}>VIVO</Text>
@@ -45,8 +51,68 @@ function App() {
             headerRight: () => (<BotonVivo />),
             headerTitleAlign:'center'
           }}
-
         />
+      <Stack.Screen
+        name="SettingScreen"
+        component={ SettingScreen }
+        options={{
+            headerTitle:( props ) => ( <LogoTvp/> ),
+            headerRight: () => ( <BotonVivo /> ),
+            headerTitleAlign:'center',
+            title:'Configuraciones',
+        }}
+        />
+
+      <Stack.Screen
+        name="SocialNetworksScreen"
+        component={ SocialNetworksScreen }
+        options={{
+            headerTitle:( props ) => ( <LogoTvp />),
+            headerRight: () => ( <BotonVivo /> ),
+            headerTitleAlign:'center'
+        }}
+      />
+
+      <Stack.Screen
+        name="newsScreen"
+        component={ NewsScreen }
+        options={{
+            headerTitle:( props ) => ( <LogoTvp />),
+            headerRight: () => ( <BotonVivo /> ),
+            headerTitleAlign:'center'
+        }}
+        />
+
+      <Stack.Screen
+        name="Streams"
+        component={ Streams }
+        options={{
+            headerTitle:( props ) => ( <LogoTvp />),
+            headerRight: () => ( <BotonVivo /> ),
+            headerTitleAlign:'center'
+        }}
+      />
+
+      <Stack.Screen
+        name='Seccion'
+        component={ Seccion }
+        options={{
+          headerTitle: () => <LogoTvp />,
+          headerRight: () => (<BotonVivo />),
+          headerTitleAlign:'center'
+        }}
+      />
+
+      <Stack.Screen
+        name='vivo'
+        component={ VivoVideo }
+        options={{
+          headerTitle: () => <LogoTvp />,
+          headerRight: () => (<BotonVivo />),
+          headerTitleAlign:'center'
+        }}
+      />
+
       </Stack.Navigator>
     </NavigationContainer>
   )

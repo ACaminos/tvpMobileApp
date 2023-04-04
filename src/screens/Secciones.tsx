@@ -1,4 +1,4 @@
-import { FlatList, View, Text, Dimensions, Image } from 'react-native'
+import { FlatList, Text, Dimensions, SafeAreaView } from 'react-native'
 
 //Resources
 import Icon from 'react-native-vector-icons/Ionicons';
@@ -12,19 +12,19 @@ const windowWidth = Dimensions.get('window').width/2;
 
 export const Secciones = ( { navigation } ) => {
   return (
-      <View>
+      <SafeAreaView>
           <FlatList
             numColumns={2}
             data={DataSecciones}
             renderItem={ ( { item } ) => (
               <TouchableOpacity style={ { flex: 1, width:windowWidth } }>
-                <Card style={ { margin: 10, borderRadius:0 } }>
-                    <Card.Cover style={ { marginBottom:10 } } source={`${item.photo}`} />
-                    <Text>{ item.Titulo }</Text>
+                <Card style={ { margin: 10, borderRadius:0, padding:10 } } onPress={ () => (  navigation.navigate(  'Seccion', { titulo : item.Titulo } ) ) }>
+                    <Card.Cover source={`${item.photo}`} />
+                    <Text style={{marginTop:10}}>{ item.Titulo }</Text>
                 </Card>
               </TouchableOpacity>
             )}
           />
-      </View>
+      </SafeAreaView>
   )
 }

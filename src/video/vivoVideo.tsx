@@ -19,7 +19,7 @@ const VivoVideo = () => {
         ref={video}
         style={{...styles.video, width:ancho, height:'50%', }} //height:alto
         source={{
-          uri: 'https://assets.afcdn.com/video49/20210722/v_645516.m3u8',
+          uri: 'http://190.2.58.88:8081/tvpmobiles/tvp_mobile_test/playlist.m3u8',
         }}
         useNativeControls={true}
         resizeMode="contain"
