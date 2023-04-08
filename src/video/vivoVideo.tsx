@@ -2,7 +2,7 @@ import * as React from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Resources
-import { Video } from 'expo-av';
+import { Video, ResizeMode } from 'expo-av';
 
 //resourse m3u8
 //https://gist.github.com/Fazzani/8f89546e188f8086a46073dc5d4e2928
@@ -19,11 +19,13 @@ const VivoVideo = () => {
         ref={video}
         style={{...styles.video, width:ancho, height:'50%', }} //height:alto
         source={{
-          uri: 'http://190.2.58.88:8081/tvpmobiles/tvp_mobile_test/playlist.m3u8',
+          uri: 'http://190.2.58.88:8081/tvpmobiles/tvp_mobile_test/playlist.m3u8'
         }}
         useNativeControls={true}
-        resizeMode="contain"
+        resizeMode={ResizeMode.CONTAIN}
         isLooping
+        volume={1.0}
+        // videoStyle={}
         onPlaybackStatusUpdate={status => setStatus(() => status)}
       />
     </View>

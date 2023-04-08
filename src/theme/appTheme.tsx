@@ -40,6 +40,7 @@ export const styles = StyleSheet.create({
     appButtonText: {
       color: "#fff",
       fontWeight: "bold",
+      fontSize:13
       },
     //End styles button header vivo
     backgroundVideo: {
@@ -74,7 +75,6 @@ export const styles = StyleSheet.create({
       marginBottom: 15,
       lineHeight: 20,
 
-  }
+  },
     //End Styles news
-
 })
