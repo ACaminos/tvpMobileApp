@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { View, StyleSheet, useWindowDimensions } from 'react-native';
 
 //Resources
@@ -9,24 +9,21 @@ import { Video, ResizeMode } from 'expo-av';
 
 const VivoVideo = () => {
     const video = React.useRef(null);
-    const [status, setStatus] = React.useState({});
+    const [status, setStatus] = useState({});
 
-    const {width:ancho, height:alto} = useWindowDimensions()
+    const { width:ancho, height:alto } = useWindowDimensions()
 
   return (
-    <View style={styles.container}>
+    <View style={ styles.container  }>
       <Video
-        ref={video}
-        style={{...styles.video, width:ancho, height:'50%', }} //height:alto
-        source={{
-          uri: 'http://190.2.58.88:8081/tvpmobiles/tvp_mobile_test/playlist.m3u8'
-        }}
-        useNativeControls={true}
-        resizeMode={ResizeMode.CONTAIN}
+        ref={ video  }
+        style={ { ...styles.video, width:ancho, height:'50%' } } //height:alto
+        source={  { uri: 'http://190.2.58.88:8081/tvpmobiles/tvp_mobile_test/playlist.m3u8' } }
+        useNativeControls={ true }
+        resizeMode={  ResizeMode.CONTAIN  }
         isLooping
-        volume={1.0}
-        // videoStyle={}
-        onPlaybackStatusUpdate={status => setStatus(() => status)}
+        volume={  1.0 }
+        onPlaybackStatusUpdate={  status => setStatus(  () => status  ) }
       />
     </View>
   );
