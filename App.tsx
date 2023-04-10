@@ -6,19 +6,20 @@ import {Button, Image, Text, TouchableOpacity} from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+//Screens
+import Seccion from './src/screens/Seccion';
+import VivoVideo from './src/video/VivoVideo';
+import { Streams } from './src/screens/Streams';
+import NewsScreen from './src/screens/NewsScreen';
+import SettingScreen from './src/screens/SettingScreen';
+import SocialNetworksScreen from './src/screens/SocialNetworksScreen';
+
+
 //Navigator
-import { MenuLateral } from './src/navigator/MenuLateral';
-import { StatusBar } from 'expo-status-bar';
 import { Tabs } from './src/navigator/Tabs';
 
 //Styles
 import { styles } from './src/theme/appTheme';
-import Seccion from './src/screens/Seccion';
-import SettingScreen from './src/screens/SettingScreen';
-import SocialNetworksScreen from './src/screens/SocialNetworksScreen';
-import { Streams } from './src/screens/Streams';
-import NewsScreen from './src/screens/NewsScreen';
-import VivoVideo from './src/video/VivoVideo';
 
 
 const Stack = createNativeStackNavigator();
@@ -27,12 +28,11 @@ export const LogoTvp =() => {
   return( <Image style={ { width:50, height:50 } } source={ require('./src/assets/android-chrome-256x256.png')}/>)
 }
 
-export const BotonVivo = ( { navigation } ) => {
+export const BotonVivo = () => {
   return (
       <TouchableOpacity  style={styles.appButtonContainer}>
           <Text style={styles.appButtonText}>VIVO</Text>
       </TouchableOpacity>
-      // <Button title='VIVO' color='red' onPress={vivoVideo} />
   )
 }
 
@@ -40,8 +40,6 @@ function App() {
 
   return (
     <NavigationContainer>
-      {/* <MenuLateral/> */}
-
       <Stack.Navigator>
         <Stack.Screen
           name='Home'
