@@ -21,7 +21,7 @@ export const logoTvp =() => {
 
 export const Tabs = () => {
   return (
-    <Tab.Navigator barStyle={ { backgroundColor:'#091e40' } } inactiveColor={'white'} shifting={true} activeColor={'white'}>
+    <Tab.Navigator barStyle={ { backgroundColor:'#091e40' } } inactiveColor={ 'white' } shifting={ true } activeColor={ 'white' }>
       <Tab.Screen
         name='inicio'
         component={ HomeScreen }

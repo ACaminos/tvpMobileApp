@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler'; //Don't move this line!
 import React, {useEffect} from 'react'
-import {Button, Image, Text, TouchableOpacity} from 'react-native'
+import { Image, StatusBar, Text, TouchableOpacity} from 'react-native'
 
 //Resources
 import { NavigationContainer } from '@react-navigation/native';
@@ -14,13 +14,11 @@ import NewsScreen from './src/screens/NewsScreen';
 import SettingScreen from './src/screens/SettingScreen';
 import SocialNetworksScreen from './src/screens/SocialNetworksScreen';
 
-
 //Navigator
 import { Tabs } from './src/navigator/Tabs';
 
 //Styles
 import { styles } from './src/theme/appTheme';
-
 
 const Stack = createNativeStackNavigator();
 
@@ -30,8 +28,8 @@ export const LogoTvp =() => {
 
 export const BotonVivo = () => {
   return (
-      <TouchableOpacity  style={styles.appButtonContainer}>
-          <Text style={styles.appButtonText}>VIVO</Text>
+      <TouchableOpacity style={ styles.appButtonContainer }>
+          <Text style={ styles.appButtonText }>VIVO</Text>
       </TouchableOpacity>
   )
 }
@@ -40,21 +38,23 @@ function App() {
 
   return (
     <NavigationContainer>
+      <StatusBar barStyle={'light-content'} backgroundColor={ 'blue' } animated={ true } hidden={false} />
       <Stack.Navigator>
         <Stack.Screen
           name='Home'
-          component={Tabs}
+          component={ Tabs }
           options={{
-            headerTitle: () => <LogoTvp />,
-            headerRight: () => (<BotonVivo />),
-            headerTitleAlign:'center'
+            headerTitle: () => ( <LogoTvp /> ),
+            headerRight: () => ( <BotonVivo /> ),
+            headerTitleAlign:'center',
+            title: 'Inicio',
           }}
         />
       <Stack.Screen
         name="SettingScreen"
         component={ SettingScreen }
         options={{
-            headerTitle:( props ) => ( <LogoTvp/> ),
+            headerTitle:() => ( <LogoTvp/> ),
             headerRight: () => ( <BotonVivo /> ),
             headerTitleAlign:'center',
             title:'Configuraciones',
@@ -65,7 +65,7 @@ function App() {
         name="SocialNetworksScreen"
         component={ SocialNetworksScreen }
         options={{
-            headerTitle:( props ) => ( <LogoTvp />),
+            headerTitle:() => ( <LogoTvp /> ),
             headerRight: () => ( <BotonVivo /> ),
             headerTitleAlign:'center'
         }}
@@ -75,7 +75,7 @@ function App() {
         name="newsScreen"
         component={ NewsScreen }
         options={{
-            headerTitle:( props ) => ( <LogoTvp />),
+            headerTitle:() => ( <LogoTvp /> ),
             headerRight: () => ( <BotonVivo /> ),
             headerTitleAlign:'center'
         }}
@@ -85,7 +85,7 @@ function App() {
         name="Streams"
         component={ Streams }
         options={{
-            headerTitle:( props ) => ( <LogoTvp />),
+            headerTitle:() => ( <LogoTvp /> ),
             headerRight: () => ( <BotonVivo /> ),
             headerTitleAlign:'center'
         }}
@@ -95,8 +95,8 @@ function App() {
         name='Seccion'
         component={ Seccion }
         options={{
-          headerTitle: () => <LogoTvp />,
-          headerRight: () => (<BotonVivo />),
+          headerTitle: () => ( <LogoTvp /> ),
+          headerRight: () => ( <BotonVivo /> ),
           headerTitleAlign:'center'
         }}
       />
@@ -105,8 +105,8 @@ function App() {
         name='vivo'
         component={ VivoVideo }
         options={{
-          headerTitle: () => <LogoTvp />,
-          headerRight: () => (<BotonVivo />),
+          headerTitle: () => ( <LogoTvp /> ),
+          headerRight: () => ( <BotonVivo /> ),
           headerTitleAlign:'center'
         }}
       />

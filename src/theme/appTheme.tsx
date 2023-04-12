@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Platform, StyleSheet } from "react-native";
 
 export const styles = StyleSheet.create({
     globalMargin: {
@@ -77,4 +77,24 @@ export const styles = StyleSheet.create({
 
   },
     //End Styles news
+
+    //Imagen Articulo interno
+    articleImage : {
+      width: '100%',
+      resizeMode:'stretch',
+      ...Platform.select({
+        android:{
+          height:250 //300
+        },
+        ios:{
+          height:200
+        }
+      })
+    },
+    //Volanta
+    volanta : {
+      color: 'blue',
+      fontSize: 17,
+      fontWeight: 'bold'
+    }
 })
