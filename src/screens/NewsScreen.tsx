@@ -29,6 +29,16 @@ export default function NewsScreen( { route } ) {
 
 //  console.log('aca estoy', videoId)
 
+const iframeModel = {
+  contentModel: 'block',
+  isVoid: false,
+  inlineStyles: {
+    margin: { cssProp: 'margin', allowedValues: ['auto'] },
+    'text-align': { cssProp: 'text-align' },
+  },
+  tagName: 'iframe',
+};
+
 
   return (
     <>
