@@ -25,7 +25,7 @@ interface Post {
     objeto_destacado_0_objeto_destacado ?: string;
   };
   thumbnail_images : {
-    full : {
+    large : {
         url : string;
       }
     }
@@ -63,7 +63,7 @@ export const HomeScreen = ( { navigation } : Props ) => {
               titulo : item.title,
               contenido : item.content,
               excerpt : item.excerpt,
-              imagen : item.thumbnail_images.full.url,
+              imagen : item.thumbnail_images.large.url,
               video : item.custom_fields.objeto_destacado_0_objeto_destacado,
               volanta : item.custom_fields.volanta
               }
@@ -72,7 +72,7 @@ export const HomeScreen = ( { navigation } : Props ) => {
             <Card.Content>
               <Text variant='titleSmall' style={styles.volanta}>{ ( item.custom_fields.volanta ) }</Text>
               <HTML source={ { html: `<span style='fontSize:23px;fontWeight:bold;marginBottom:10px'>${ item.title }</span>` }} contentWidth={ width } />
-              <Image source={ { uri: `${item.thumbnail_images.full.url}`} } borderRadius={ 0 } style={ { width:'100%',height:250 } } />
+              <Image source={ { uri: `${item.thumbnail_images.large.url}`} } borderRadius={ 0 } style={ { width:'100%',height:250 } } />
             </Card.Content>
           </Card>
         }
