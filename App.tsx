@@ -77,7 +77,8 @@ function App() {
         options={{
             headerTitle:() => ( <LogoTvp /> ),
             headerRight: () => ( <BotonVivo /> ),
-            headerTitleAlign:'center'
+            headerTitleAlign:'center',
+            animation: 'none'
         }}
         />
 
